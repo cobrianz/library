@@ -253,6 +253,7 @@ span{
 
 @media screen and (max-width: 700px){
     nav ul{
+        display: none;
         flex-direction: column;
         gap: 1rem;
         position: absolute;
@@ -273,6 +274,10 @@ span{
     }
     .reasons{
         flex-direction: column;
+    }
+
+    .hero__image img{
+        width: 100%;
     }
 }
 
