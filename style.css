@@ -66,7 +66,7 @@ ul li a:hover{
     color: #383169;
 }
 
-ul li:last-child{
+nav ul li:last-child{
     border: 2px solid #6a5acd;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -81,8 +81,16 @@ ul li:last-child{
     -o-transition: transform 1 ease-in-out;
 }
 
-ul li:last-child:hover{
+nav ul li:last-child:hover{
     border: 1px solid #6a5acd;
+}
+
+.bar{
+    display: none;
+}
+
+.bar img{
+    width: 1.4rem;
 }
 
 .hero{
@@ -172,12 +180,15 @@ span{
 }
 
 /* featured books */
-
+#close{
+    display: none;
+}
 .books{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 2rem;
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
 }
 
 .book img{
@@ -194,4 +205,92 @@ span{
 }
 .book .rating img{
     width: 1rem;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    background: #2f2e2e;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.footer h1{
+    font-size: 2rem;
+}
+
+.footer ul li a{
+    color: #aea3f6;
+}
+
+.footer ul li a:hover{
+    color: #fff;
+}
+
+.copyright{
+    color: #e2e1e6;
+}
+
+
+@media screen and (max-width: 1200px){
+    .books{
+        grid-template-columns: repeat(3, 2fr);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .books{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav ul{
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        align-items: flex-end;
+        right: 5%;
+        top: 4rem;
+        justify-content: center;
+        background: #e2e1e6;
+        padding: 3rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+}
+    .bar{
+        display: flex;
+    }
+    .reasons{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .books{
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+    .container{
+        width: 95%;
+    }
+    .hero__text h2{
+        font-size: 2rem;
+    }
+    .title h2{
+        font-size: 1.6rem;
+    }
+    .footer ul{
+        flex-direction: column;
+    }
 }
